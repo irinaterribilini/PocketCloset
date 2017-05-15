@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Back
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Categories</ion-list-header>
+
+      <ion-item *ngFor="let point of list" (click)=showClothes(point)>
+        <button ion-button clear large full>
+          {{point}}
+        </button>
+      </ion-item>
+  </ion-list>
+</ion-content>
