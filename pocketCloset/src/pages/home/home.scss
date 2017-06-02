@@ -2,7 +2,55 @@ page-home {
 
 }
 
-.button {
-  display:block;
-  text-align: center;
+.master{
+  background-color: #99919c;
+
+}
+
+.button.camera-button {
+   display: block;
+   text-align: center;
+   margin: 0 auto;
+   background-color: #273b7a;
+ }
+
+.button.camera-button:hover{
+  background-color: #516cc8;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+.toolbar-background-md{
+  background-color: #4e4950;
+}
+
+.toolbar-title.toolbar-title-md{
+  color: white;
+}
+
+.tabbar.show-tabbar{
+  background-color: #4e4950;
+}
+
+.tab-button.has-title.has-icon{
+  color: white;
+}
+
+.tab-button-icon.icon.icon-md.ion-md-home{
+  color: white;
+}
+
+.tab-button-icon.icon.icon-md.ion-md-photos{
+  color: white;
+}
+
+.tab-button-icon.icon.icon-md.ion-md-information-circle{
+  color: white;
+}
+
+h2{
+  color: white;
 }

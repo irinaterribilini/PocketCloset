@@ -4,12 +4,12 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding class="master">
   <h2>PocketCloset!</h2>
   <p>
-  <img src="assets/img/closet_white.jpg" tappable (click)="showLists()"/>
-  <button ion-button round icon-only large (click)="takePhoto()">
-      <ion-icon  name="camera"></ion-icon>
+  <img src="assets/img/closet_blue.png" tappable (click)="showLists()"/><br>
+  <button class="camera-button" ion-button round icon-only middle full (click)="takePhoto()">
+      <ion-icon name="camera"></ion-icon>add photo
   </button>
   </p>
 </ion-content>
