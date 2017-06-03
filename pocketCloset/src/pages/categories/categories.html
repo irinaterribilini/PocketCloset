@@ -8,12 +8,11 @@
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Choose A Category</ion-list-header>
-
-      <ion-item-sliding *ngFor="let point of list">
+      <p>
+      <ion-item-sliding *ngFor="let point of categories | async">
         <ion-item (tap)=showClothes(point)>
           <button ion-button clear large full>
-            {{point}}
+            {{point.category}}
           </button>
         </ion-item>
         <ion-item-options slide="right">

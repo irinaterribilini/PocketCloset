@@ -13,6 +13,20 @@ import { ClothesPage } from '../pages/clothes/clothes';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule, AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase/app';
+
+export const firebaseConfig = {
+    apiKey: "AIzaSyAhEL9NQVwbvICwsyCdz05VLNxDMgFhlwA",
+    authDomain: "pocketcloset-201dc.firebaseapp.com",
+    databaseURL: "https://pocketcloset-201dc.firebaseio.com",
+    projectId: "pocketcloset-201dc",
+    storageBucket: "pocketcloset-201dc.appspot.com",
+    messagingSenderId: "325924693106"
+  };
+
 @NgModule({
   declarations: [
     MyApp,
@@ -25,7 +39,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

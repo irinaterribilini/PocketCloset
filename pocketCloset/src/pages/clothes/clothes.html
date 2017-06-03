@@ -10,15 +10,9 @@
   <ion-list>
     <ion-list-header></ion-list-header>
   </ion-list>
-  <ion-slides pager>
-    <ion-slide>
-      <h1>Slide 1</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 2</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 3</h1>
+  <ion-slides pager >
+    <ion-slide *ngFor="let picture of images">
+      <h1>{{picture.image}}</h1>
     </ion-slide>
   </ion-slides>
 </ion-content>
