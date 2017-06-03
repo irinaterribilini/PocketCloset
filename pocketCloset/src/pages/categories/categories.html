@@ -1,19 +1,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Back
+      Categories
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Categories</ion-list-header>
+    <ion-list-header>Choose A Category</ion-list-header>
 
-      <ion-item *ngFor="let point of list" (click)=showClothes(point)>
-        <button ion-button clear large full>
-          {{point}}
-        </button>
-      </ion-item>
+      <ion-item-sliding *ngFor="let point of list">
+        <ion-item (tap)=showClothes(point)>
+          <button ion-button clear large full>
+            {{point}}
+          </button>
+        </ion-item>
+        <ion-item-options slide="right">
+          <button ion-button color="secondary">
+            <ion-icon name="md-trash"></ion-icon>
+            Delete
+          </button>
+        </ion-item-options>
+      </ion-item-sliding>
+
   </ion-list>
 </ion-content>
