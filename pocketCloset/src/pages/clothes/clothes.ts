@@ -14,8 +14,4 @@ export class ClothesPage {
     console.log('This test:' + this.images[0].image);
   }
 
-  addCategory(){
-
-
-  }
 }

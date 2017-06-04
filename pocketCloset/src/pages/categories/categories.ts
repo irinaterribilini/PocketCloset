@@ -44,6 +44,8 @@ export class CategoriesPage {
           {
             text: 'Save',
             handler: data => {
+              console.log(data);
+              this.categories.push(data.title);
               console.log('Saved clicked');
             }
           }
