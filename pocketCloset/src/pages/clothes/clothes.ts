@@ -13,4 +13,9 @@ export class ClothesPage {
     this.images = params.get('images');
     console.log('This test:' + this.images[0].image);
   }
+
+  addCategory(){
+
+
+  }
 }
