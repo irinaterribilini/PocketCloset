@@ -1,0 +1,56 @@
+{
+  "categories"  :[
+    {
+      "category"  : "Sport",
+      "images"    : [
+        {
+          "image"   : "Bild 1"
+        },
+        {
+          "image"   : "Bild 2"
+        }
+      ]
+    },
+    {
+      "category"  : "Business",
+      "images"    : [
+        {
+          "image"   : "Bild 3"
+        }
+      ]
+    },
+    {
+      "category"  : "Casual",
+      "images"    : [
+        {
+          "image"   : "Bild 4"
+        },
+        {
+          "image"   : "Bild 5"
+        }
+      ]
+    },
+    {
+      "category"  : "Summer",
+      "images"    : [
+        {
+          "image"   : "Bild 6"
+        },
+        {
+          "image"   : "Bild 7"
+        },
+        {
+          "image"   : "Bild 8"
+        }
+      ]
+    },
+    {
+      "category"  : "Party",
+      "images"    : [
+        {
+          "image"   : "Bild 9"
+        }
+      ]
+    }
+  ]
+}

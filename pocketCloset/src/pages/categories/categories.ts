@@ -44,12 +44,18 @@ export class CategoriesPage {
           {
             text: 'Save',
             handler: data => {
+              this.categories.push({category: data.title, images: [{image: 'Noch keine Bilder'}]});
               console.log('Saved clicked');
             }
           }
         ]
       });
       prompt.present();
+    }
+
+    deleteCategory(categoryKey: string){
+      this.categories.remove(categoryKey);
+      console.log('delete Button')
     }
 
 }
