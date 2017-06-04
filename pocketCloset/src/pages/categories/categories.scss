@@ -42,3 +42,14 @@
 .scroll-content{
  background-color: #99919c;
 }
+
+.button.add-button {
+   display: block;
+   text-align: center;
+   margin: 0 auto;
+   background-color: #273b7a;
+ }
+
+.button.add-button:hover{
+  background-color: #516cc8;
+}
