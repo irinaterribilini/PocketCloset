@@ -15,10 +15,10 @@
         <ion-option *ngFor="let point of categories | async" value='{{point.category}}'>{{point.category}}</ion-option>
       </ion-select>
     </ion-item>
-      <button ion-button round (click)="close()">
+      <button class="cancel" ion-button round (click)="close()">
         <ion-icon name="close">&nbsp;&nbsp;Cancel</ion-icon>
       </button>
-      <button ion-button round>
+      <button class="save" ion-button round>
         <ion-icon name="checkmark">&nbsp;&nbsp;Save</ion-icon>
       </button>
   </ion-list>
