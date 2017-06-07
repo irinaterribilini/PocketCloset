@@ -8,6 +8,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CategoriesPage } from '../pages/categories/categories';
 import { ClothesPage } from '../pages/clothes/clothes';
+import { UploadPage } from '../pages/upload/upload';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -33,7 +34,8 @@ export const firebaseConfig = {
     HomePage,
     TabsPage,
     CategoriesPage,
-    ClothesPage
+    ClothesPage,
+    UploadPage
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ export const firebaseConfig = {
     HomePage,
     TabsPage,
     CategoriesPage,
-    ClothesPage
+    ClothesPage,
+    UploadPage
   ],
   providers: [
     StatusBar,
