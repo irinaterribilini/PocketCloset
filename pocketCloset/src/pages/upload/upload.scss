@@ -1,21 +1,29 @@
 .alert-md .alert-title{
-color: black !important;
+  color: black !important;
+}
+
+.select-text{
+  color: white;
 }
 
 .save.button.button-md.button-default.button-default-md.button-round.button-round-md{
-   margin-right: 50px;
+   float: right;
+   margin-right: 5px;
+   margin-top: 10px;
    background-color: #273b7a;
 }
 
 .save.button.button-md.button-default.button-default-md.button-round.button-round-md:hover{
- background-color: #516cc8;
+  background-color: #516cc8;
 }
 
 .cancel.button.button-md.button-default.button-default-md.button-round.button-round-md{
-
+   float: left;
+   margin-left: 15px;
+   margin-top: 10px;
    background-color: #273b7a;
 }
 
 .cancel.button.button-md.button-default.button-default-md.button-round.button-round-md:hover{
- background-color: #516cc8;
+  background-color: #516cc8;
 }
