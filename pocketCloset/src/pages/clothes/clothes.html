@@ -11,7 +11,7 @@
     <ion-row *ngFor="let picture of images">
       <ion-col></ion-col>
       <ion-col col-10>
-        <ion-card >
+        <ion-card class="block">
         <img [src]="picture.image" *ngIf="picture.image"/>
         </ion-card>
       </ion-col>

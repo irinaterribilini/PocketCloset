@@ -12,4 +12,7 @@ export class ClothesPage {
     this.images = params.get('images');
   }
 
+   deletePhoto(index){
+    this.images.splice(index, 1);
+    }
 }
