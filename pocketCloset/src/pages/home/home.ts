@@ -9,15 +9,12 @@ import { ModalController } from 'ionic-angular';
   selector: 'home',
   templateUrl: 'home.html'
 })
+
 export class HomePage {
   public photos: any;
   public base64Image: string;
 
   constructor(public navCtrl: NavController, private camera: Camera, public modalCtr: ModalController) {
-  }
-
-  ngOnInit(){
-
   }
 
   showLists(){
