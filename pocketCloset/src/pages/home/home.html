@@ -1,18 +1,29 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Pocket Closet</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding class="master">
-  <h2>PocketCloset!</h2>
+
+  <img src="assets/img/closet_blue.png" tappable (click)="showLists()"/>
+  <ion-fab bottom right>
+    <button class="camera-button" ion-fab ><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list side="top">
+      <p>
+        <button class="camera-button" ion-fab round icon-only middle (click)="openLibrary()">
+            <ion-icon name="images"></ion-icon>
+        </button>
+
+      </p>
+      <button class="camera-button" ion-fab round icon-only middle (click)="takePhoto()">
+          <ion-icon name="camera"></ion-icon>
+      </button>
+    </ion-fab-list>
+  </ion-fab>
+  <!-- p tag löschen-->
   <p>
-  <img src="assets/img/closet_blue.png" tappable (click)="showLists()"/><br>
-  <button class="camera-button" ion-button round icon-only middle full (click)="takePhoto()">
-      <ion-icon name="camera"></ion-icon>add photo
-  </button>
+    <button class="camera-button" ion-button round icon-only full middle (click)="openModal()">Test</button>
   </p>
-  <button class="camera-button" ion-button round icon-only middle full (click)="openModal()">
-      <ion-icon name="alert"></ion-icon>Test Button
-  </button>
+
 </ion-content>

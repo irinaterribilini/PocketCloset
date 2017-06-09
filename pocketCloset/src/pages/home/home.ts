@@ -30,7 +30,8 @@ export class HomePage {
       destinationType: this.camera.DestinationType.DATA_URL,
       encodingType: this.camera.EncodingType.JPEG,
       mediaType: this.camera.MediaType.PICTURE,
-      sourceType: 1
+      sourceType: 1,
+      correctOrientation: true
     }
 
     this
@@ -38,14 +39,35 @@ export class HomePage {
       .getPicture(options)
       .then((imageData) => {
         this.base64Image = "data:image/jpeg;base64," + imageData;
-        this.openModal();
+        this.openModal(this.base64Image);
       }, (err) => {
         console.log(err);
       });
   }
 
-  openModal(){
-    let modal = this.modalCtr.create(UploadPage);
+  openLibrary(){
+    const options : CameraOptions = {
+      quality: 50,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      encodingType: this.camera.EncodingType.JPEG,
+      mediaType: this.camera.MediaType.PICTURE,
+      sourceType: 0,
+      correctOrientation: true
+    }
+
+    this
+      .camera
+      .getPicture(options)
+      .then((imageData) => {
+        this.base64Image = "data:image/jpeg;base64," + imageData;
+        this.openModal(this.base64Image);
+      }, (err) => {
+        console.log(err);
+      });
+  }
+
+  openModal(photoSrc){
+    let modal = this.modalCtr.create(UploadPage, {photo: photoSrc});
     modal.present();
   }
 }
