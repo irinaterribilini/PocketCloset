@@ -27,3 +27,18 @@
 .cancel.button.button-md.button-default.button-default-md.button-round.button-round-md:hover{
   background-color: #516cc8;
 }
+
+.block{
+  position:relative;
+  .deleteIcon{
+    position: absolute;
+    margin-left: 85%;
+    margin-top: 5px;
+    color: #FFFFFF;
+  }
+}
+
+.selectedphoto {
+  height: 100;
+  width: auto;
+}

@@ -1,27 +1,51 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Upload Settings
+      Add picture
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content class="master">
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+    </ion-col>
+    <ion-col col-6>
+      <ion-card class="block">
+        <img class="selectedphoto" [src]="photo" *ngIf="photo"/>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
   <ion-list>
     <ion-list-header></ion-list-header>
+
     <ion-item>
       <ion-label>&nbsp;&nbsp; Category</ion-label>
-      <ion-select [(ngModel)]="category" >
+      <ion-select [(ngModel)]="category" (ionChange)="changeCategory(category)">
         <ion-option *ngFor="let point of categories | async" value='{{point.category}}'>{{point.category}}</ion-option>
       </ion-select>
     </ion-item>
-      <button class="cancel" ion-button round (click)="close()">
-        <ion-icon name="close">&nbsp;&nbsp;Cancel</ion-icon>
-      </button>
-      <button class="save" ion-button round>
-        <ion-icon name="checkmark">&nbsp;&nbsp;Save</ion-icon>
-      </button>
-  </ion-list>
 
+    <p>
+      <ion-row>
+        <ion-col>
+          <button ion-button round full (click)="close()">
+            <ion-icon name="close">&nbsp;&nbsp;Cancel</ion-icon>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button round full (click)="save()">
+            <ion-icon name="checkmark">&nbsp;&nbsp;Save</ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+    </p>
+  </ion-list>
 
 </ion-content>
