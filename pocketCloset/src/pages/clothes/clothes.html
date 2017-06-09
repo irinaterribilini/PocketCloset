@@ -12,6 +12,7 @@
       <ion-col></ion-col>
       <ion-col col-10>
         <ion-card class="block">
+          <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(images)"> </ion-icon>
         <img [src]="picture.image" *ngIf="picture.image"/>
         </ion-card>
       </ion-col>
