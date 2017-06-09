@@ -2,14 +2,14 @@ page-home {
 
 }
 
-.button.camera-button {
+.camera-button.fab.fab-md {
    display: block;
    text-align: center;
    margin: 0 auto;
    background-color: #273b7a;
  }
 
-.button.camera-button:hover{
+.camera-button.fab.fab-md:hover{
   background-color: #516cc8;
 }
 
@@ -47,5 +47,9 @@ img {
 }
 
 h2{
+  color: white;
+}
+
+.camera-button.fab.fab-md.fab-in-list.fab-md-in-list.show{
   color: white;
 }
