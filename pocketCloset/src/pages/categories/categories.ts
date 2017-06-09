@@ -44,7 +44,7 @@ export class CategoriesPage {
           {
             text: 'Save',
             handler: data => {
-              this.categories.push({category: data.title, images: [{image: 'Noch keine Bilder'}]});
+              this.categories.push({category: data.title, images: [{image: ''}]});
               console.log('Saved clicked');
             }
           }

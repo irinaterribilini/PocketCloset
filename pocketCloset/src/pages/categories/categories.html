@@ -15,7 +15,7 @@
             {{point.category}}
           </button>
         </ion-item>
-        <ion-item-options slide="right">
+        <ion-item-options slide="right" *ngIf="point.$key!=0">
           <button ion-button color="secondary" (click)="deleteCategory(point.$key)">
             <ion-icon name="md-trash"></ion-icon>
             Delete
