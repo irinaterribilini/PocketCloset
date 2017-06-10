@@ -17,10 +17,11 @@ export class CategoriesPage {
     this.categories = this.db.list('categories');
   }
 
-  showClothes(point){
+  showClothes(point,key){
     console.log('showClothes: '  + point.images[0].image);
     this.navCtrl.push(ClothesPage,{
-      images: point.images
+      images: point.images,
+      category_key: key
     });
   }
 
