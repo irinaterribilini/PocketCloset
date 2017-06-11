@@ -19,6 +19,7 @@ export class CategoriesPage {
 
   showClothes(point,key){
     this.navCtrl.push(ClothesPage,{
+      category: point.category,
       images: point.images,
       category_key: key
     });

@@ -12,12 +12,14 @@ import { AlertController } from 'ionic-angular';
 export class ClothesPage {
   images: any;
   category_key: any;
+  category: any;
   categories: FirebaseListObservable<any>;
 
   constructor(public navCtrl: NavController, public params: NavParams, public db: AngularFireDatabase, public afAuth: AngularFireAuth, public alertCtrl: AlertController) {
     this.categories = this.db.list('categories');
     this.images = params.get('images');
     this.category_key = params.get('category_key');
+    this.category = params.get('category');
   }
 
   deletePhoto(imageData){
