@@ -20,31 +20,22 @@ export class ClothesPage {
   }
 
   deletePhoto(imageData){
-    /* Muss noch fertig gemacht werden!!!!
-    console.log(this.category_key);
     let subcription = this.categories.subscribe(
       competitors => {
           competitors.map(competitor => {
 
             if (competitor.$key === this.category_key){
-              competitor.images.map(imageObject =>{
-
-                if (imageObject.image === imageData){
-                  var index = competitor.images.indexOf(imageData);
-                  competitor.images.splice(index,1);
-
-                  this.categories.update(this.category_key, {images:[{imageObject}]});
-                }
-
-              })
+              var index = competitor.images.findIndex(imageObject => {
+                return (imageObject.image === imageData);
+              });
+              competitor.images.splice(index,1);
+              this.categories.update(this.category_key, {images:competitor.images});
             }
 
           })
       }
     );
     subcription.unsubscribe();
-    */
-
   }
 
 }

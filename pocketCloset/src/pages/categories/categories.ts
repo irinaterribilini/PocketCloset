@@ -18,7 +18,6 @@ export class CategoriesPage {
   }
 
   showClothes(point,key){
-    console.log('showClothes: '  + point.images[0].image);
     this.navCtrl.push(ClothesPage,{
       images: point.images,
       category_key: key
@@ -39,14 +38,12 @@ export class CategoriesPage {
           {
             text: 'Cancel',
             handler: data => {
-              console.log('Cancel clicked');
             }
           },
           {
             text: 'Save',
             handler: data => {
               this.categories.push({category: data.title, images: [{image: ''}]});
-              console.log('Saved clicked');
             }
           }
         ]
@@ -56,7 +53,6 @@ export class CategoriesPage {
 
     deleteCategory(categoryKey: string){
       this.categories.remove(categoryKey);
-      console.log('delete Button')
     }
 
 }

@@ -5,25 +5,18 @@
 </ion-header>
 
 <ion-content padding class="master">
-
   <img src="assets/img/closet_blue.png" tappable (click)="showLists()"/>
-  <ion-fab bottom right>
+  <ion-fab bottom right #fab>
     <button class="camera-button" ion-fab ><ion-icon name="add"></ion-icon></button>
     <ion-fab-list side="top">
       <p>
-        <button class="camera-button" ion-fab round icon-only middle (click)="openLibrary()">
+        <button class="camera-button" ion-fab round icon-only middle (click)="openLibrary(fab)">
             <ion-icon name="images"></ion-icon>
         </button>
-
       </p>
-      <button class="camera-button" ion-fab round icon-only middle (click)="takePhoto()">
+      <button class="camera-button" ion-fab round icon-only middle (click)="takePhoto(fab)">
           <ion-icon name="camera"></ion-icon>
       </button>
     </ion-fab-list>
   </ion-fab>
-  <!-- p tag löschen-->
-  <p>
-    <button class="camera-button" ion-button round icon-only full middle (click)="openModal()">Test</button>
-  </p>
-
 </ion-content>

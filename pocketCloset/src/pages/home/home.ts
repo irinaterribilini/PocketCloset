@@ -4,6 +4,7 @@ import { CategoriesPage } from '../categories/categories';
 import { UploadPage } from '../upload/upload';
 import { Camera, CameraOptions} from '@ionic-native/camera';
 import { ModalController } from 'ionic-angular';
+import { FabContainer } from 'ionic-angular';
 
 @Component({
   selector: 'home',
@@ -21,7 +22,7 @@ export class HomePage {
     this.navCtrl.push(CategoriesPage);
   }
 
-  takePhoto() {
+  takePhoto(fab: FabContainer) {
     const options : CameraOptions = {
       quality: 50,
       destinationType: this.camera.DestinationType.DATA_URL,
@@ -40,9 +41,10 @@ export class HomePage {
       }, (err) => {
         console.log(err);
       });
+    fab.close();
   }
 
-  openLibrary(){
+  openLibrary(fab: FabContainer){
     const options : CameraOptions = {
       quality: 50,
       destinationType: this.camera.DestinationType.DATA_URL,
@@ -61,6 +63,7 @@ export class HomePage {
       }, (err) => {
         console.log(err);
       });
+    fab.close();
   }
 
   openModal(photoSrc){

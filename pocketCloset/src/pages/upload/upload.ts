@@ -27,12 +27,10 @@ export class UploadPage {
   save(){
     let subcription = this.categories.subscribe(
     competitors => {
-      console.log(competitors);
         competitors.map(competitor =>{
           if(competitor.category === this.selectedValue){
             var imageList = competitor.images;
             imageList.push({image:this.photo});
-            console.log(imageList);
             this.categories.update(competitor.$key, {images:imageList});
           }
         })
