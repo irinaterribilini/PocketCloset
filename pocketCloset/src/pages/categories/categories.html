@@ -10,7 +10,7 @@
   <ion-list>
       <p>
       <ion-item-sliding *ngFor="let point of categories | async">
-        <ion-item (tap)=showClothes(point)>
+        <ion-item (tap)="showClothes(point, point.$key)">
           <button ion-button clear large full>
             {{point.category}}
           </button>

@@ -11,8 +11,9 @@
     <ion-row *ngFor="let picture of images">
       <ion-col></ion-col>
       <ion-col col-10>
-        <ion-card >
-        <img [src]="picture.image" *ngIf="picture.image"/>
+        <ion-card class="block">
+          <ion-icon name="trash" class="deleteIcon" (click)="deletePhoto(picture.image)"> </ion-icon>
+          <img [src]="picture.image" *ngIf="picture.image"/>
         </ion-card>
       </ion-col>
       <ion-col></ion-col>

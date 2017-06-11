@@ -25,7 +25,7 @@ export class UploadPage {
   }
 
   save(){
-    this.categories.subscribe(
+    let subcription = this.categories.subscribe(
     competitors => {
       console.log(competitors);
         competitors.map(competitor =>{
@@ -37,6 +37,7 @@ export class UploadPage {
           }
         })
     });
+    subcription.unsubscribe();
     this.cancel();
   }
 
